@@ -45,7 +45,7 @@ def get_all_links(num_page, url):
 
   while i <= num_page:
     try:
-      url_main = url + str(i) + '.htm?sortBy=date_desc'
+      url_main = url + str(i) + '.htm?includeNoSalaryJobs=true#:~:text=11-,12,-13'
       link.append(get_position_link(url_main))
       print(url_main)
       i += 1
@@ -59,4 +59,9 @@ def get_all_links(num_page, url):
 ##
 url = 'https://www.glassdoor.com/Job/data-scientist-jobs-SRCH_KO0,14_IP'
 links = get_all_links(3, url)
-print(links[1])
+
+print(links[0][1])
+print(links[1][1])
+print(links[2][1])
+
+https://www.glassdoor.com/Job/data-scientist-jobs-SRCH_KO0,14_IP14.htm?
